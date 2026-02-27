@@ -1,0 +1,57 @@
+# WordPress core
+/wp-admin/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# WordPress configuration
+wp-config.php
+wp-config-local.php
+.htaccess
+
+# User uploaded files
+/wp-content/uploads/
+
+# Plugin and theme directories (except ours)
+/wp-content/plugins/*
+!/wp-content/plugins/.gitkeep
+
+# Backups
+*.sql
+*.sql.gz
+*.backup
+
+# Local environment
+.env
+.env.local
+Local Sites/
+local-config.php
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Node/Composer
+node_modules/
+vendor/
+composer.lock
+
+# Cache
+*.cache
+.cache/
+
+# Temp files
+*.tmp
+*.swp
+*.swo
+*~

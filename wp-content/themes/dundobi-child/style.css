@@ -1,0 +1,113 @@
+/*
+Theme Name: Dundobi Child
+Description: Child theme for GeneratePress - Dundobi Doberman breeding site
+Author: Ultron
+Author URI: https://github.com/suefyawn/dundobi
+Template: generatepress
+Version: 1.0.0
+License: MIT
+Text Domain: dundobi-child
+Domain Path: /languages
+*/
+
+/* 
+Child theme customizations go here.
+Parent theme (GeneratePress) handles most styling.
+Add custom styles as needed.
+*/
+
+/* Example custom styles */
+:root {
+  --primary-color: #333333;
+  --accent-color: #c41e3a;
+  --text-color: #333333;
+  --light-bg: #f9f9f9;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+}
+
+/* Product grid */
+.woocommerce ul.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.woocommerce ul.products li.product {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.woocommerce ul.products li.product:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Product single page */
+.product-title {
+  color: var(--primary-color);
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Forms */
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.form-row button {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.form-row button:hover {
+  background: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 32px;
+  }
+
+  .woocommerce ul.products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
