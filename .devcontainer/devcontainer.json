@@ -1,0 +1,37 @@
+{
+  "name": "Dundobi WordPress",
+  "image": "mcr.microsoft.com/devcontainers/php:8.2-apache",
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {
+      "version": "8.0"
+    }
+  },
+  "containerEnv": {
+    "WORDPRESS_DB_NAME": "dundobi_wp",
+    "WORDPRESS_DB_USER": "wordpress",
+    "WORDPRESS_DB_PASSWORD": "wordpress",
+    "WORDPRESS_DB_HOST": "localhost"
+  },
+  "forwardPorts": [80, 3306],
+  "portsAttributes": {
+    "80": {
+      "label": "WordPress",
+      "onAutoForward": "notify"
+    },
+    "3306": {
+      "label": "MySQL",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "WordPress Snippets",
+        "PHP Intelephense",
+        "Apache Conf"
+      ]
+    }
+  }
+}
